@@ -83,3 +83,26 @@ select * from caracteristicas
 #where populacao > '2900000' or pib > '20000'
 where populacao > '2900000' and pib > '20000'    # "and" ou "or"
 order by indice;
+
+select * from caracteristicas
+where capital like 'A%';     # Fornece aqueles nomes que COMEÇAM com a letra A
+
+select * from caracteristicas
+where capital like '%A';     # Fornece aqueles nomes que TERMINAM com a letra A
+
+select * from caracteristicas
+where capital like '%A%';     # Fornece aqueles nomes que tem a letra A 
+
+select * from caracteristicas
+where capital not like '%A%';     # Fornece aqueles nomes que NÃO tem a letra A 
+
+select distinct capital from caracteristicas; # Fornece todos os nomes de uma coluna sem repetição
+
+select count(*) from caracteristicas;    # Fornece a quantidade de vezes que tal variável se repete
+
+select max(pib) from caracteristicas;   # Fornece o MAIOR valor de uma variável
+select min(pib) from caracteristicas;   # Fornece o MENOR valor de uma variável
+
+select sum(populacao) from caracteristicas; # Soma todos os valores de uma coluna
+select avg(populacao) from caracteristicas; # Faz a média de todos os valores de uma coluna
+
